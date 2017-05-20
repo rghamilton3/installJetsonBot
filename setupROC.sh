@@ -1,14 +1,18 @@
 #!/bin/sh
+
 # These variables tell ROS the TurtleBot configuration;
-echo export TURTLEBOT_BASE=create2 >> ~/.bashrc
-echo export TURTLEBOT_STACKS=circles >> ~/.bashrc
-echo export TURTLEBOT_3D_SENSOR=asus_xtion_pro >> ~/.bashrc
-echo export TURTLEBOT_SERIAL_PORT=/dev/ttyUSB0 >> ~/.bashrc
+echo export TURTLEBOT_BASE=create2 >> ~/.zshenv
+echo export TURTLEBOT_STACKS=circles >> ~/.zshenv
+echo export TURTLEBOT_3D_SENSOR=kinect >> ~/.zshenv
+echo export TURTLEBOT_SERIAL_PORT=/dev/ttyUSB0 >> ~/.zshenv
 # Use the JetsonBot development paths before using the default
-echo source ~/jetsonbot/devel/setup.bash >> ~/.bashrc
-echo \# Allow RVIZ to work by unsetting the GTK_IM_MODULE environment variable >> ~/.bashrc
-echo unset GTK_IM_MODULE >> ~/.bashrc
+echo source ~/jetsonbot/devel/setup.zsh >> ~/.zshenv
+
+# Not sure if this is still needed
+#echo \# Allow RVIZ to work by unsetting the GTK_IM_MODULE environment variable >> ~/.bashrc
+#echo unset GTK_IM_MODULE >> ~/.bashrc
 # The JetsonBot is the ROS_MASTER
+
 echo \# Please set the following variables >> ~/.bashrc
 echo \# export ROS_MASTER_URI=http://\<jetsonbot ip\>:11311 >> ~/.bashrc
 echo \# export ROS_IP=\<this computers IP\> >> ~/.bashrc
