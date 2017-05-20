@@ -1,5 +1,9 @@
 #!/bin/sh
 
+if [ "$#" -ne 2 ]; then
+    echo "usage: setupROC.sh <this computer's IP> <jetsonbot's IP>"
+fi
+
 # These variables tell ROS the TurtleBot configuration;
 echo export TURTLEBOT_BASE=create2 >> ~/.zshenv
 echo export TURTLEBOT_STACKS=circles >> ~/.zshenv
@@ -11,15 +15,11 @@ echo source ~/jetsonbot/devel/setup.zsh >> ~/.zshenv
 # Not sure if this is still needed
 #echo \# Allow RVIZ to work by unsetting the GTK_IM_MODULE environment variable >> ~/.bashrc
 #echo unset GTK_IM_MODULE >> ~/.bashrc
-# The JetsonBot is the ROS_MASTER
 
-echo \# Please set the following variables >> ~/.bashrc
-echo \# export ROS_MASTER_URI=http://\<jetsonbot ip\>:11311 >> ~/.bashrc
-echo \# export ROS_IP=\<this computers IP\> >> ~/.bashrc
+# The JetsonBot is the ROS_MASTER
+echo export ROS_MASTER_URI=http://${2}:11311 >> ~/.zshenv
+echo \# export ROS_IP=${1} >> ~/.zshenv
 # The ROS_HOSTNAME may need to be set
 # export ROS_HOSTNAME=jetsonbot
 # or
 # export ROS_IP=<jetsonbot IP>
-/bin/echo -e "\e[1;32mPlease set the IP addresses of the JetsonBot and this workstation in ~/.bashrc\e[0m"
-/bin/echo -e "\e[1;32mUnder ROS_MASTER_URI and ROS_IP\e[0m"
-/bin/echo -e "\e[1;32mJetson Robot Operating Center Software Setup.\e[0m"
