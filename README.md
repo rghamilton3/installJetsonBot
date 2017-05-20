@@ -43,7 +43,7 @@ $ source ~/.zshenv
 for the changes to zshenv to take effect.
 
 ## TODO
-- [ ] Update aliasShortcuts.sh and createJetsonBotWS.sh
+- [X] Update aliasShortcuts.sh and createJetsonBotWS.sh
 - [ ] Verify other JetsonBot repos
     - [ ] Turtlebot
     - [ ] Turtlebot_create
