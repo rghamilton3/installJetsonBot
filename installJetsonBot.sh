@@ -9,7 +9,7 @@ sudo apt-get install ros-kinetic-turtlebot ros-kinetic-turtlebot-apps \
 ros-kinetic-turtlebot-interactions ros-indigo-ar-track-alvar-msgs \
 ros-indigo-collada-urdf -y
 
-cd ~/jetsonbot/src
+cd ~/workspace/ROS/jetsonbot/src
 git clone https://github.com/jetsonhacks/turtlebot.git
 git clone https://github.com/jetsonhacks/turtlebot_create.git
 git clone https://github.com/jetsonhacks/turtlebot_interactions.git
