@@ -42,3 +42,10 @@ After changing zshenv, make sure to save it. After closing, you will either have
 $ source ~/.zshenv
 for the changes to zshenv to take effect.
 
+## TODO
+- [ ] Update aliasShortcuts.sh and createJetsonBotWS.sh
+- [ ] Verify other JetsonBot repos
+    - [ ] Turtlebot
+    - [ ] Turtlebot_create
+    - [ ] Robot_model
+    - [ ] Slam_gmapping
