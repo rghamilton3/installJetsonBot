@@ -1,7 +1,7 @@
 #!/bin/sh
 # Installs the required packages and nodes for the JetsonBot
 cd ~/
-_dir="jetsonbot/src"
+_dir="/workspace/ROS/jetsonbot/src"
 # Check to make sure that the JetsonBot catkin directory exists
 [ ! -d "$_dir" ] && { echo "Error: Directory $_dir not found.\nPlease run createJetsonBotWS.sh to create the JetsonBot catkin workspace."; exit 2; }
 # Install TurtleBot from repository

@@ -10,7 +10,7 @@ echo export TURTLEBOT_STACKS=circles >> ~/.zshenv
 echo export TURTLEBOT_3D_SENSOR=kinect >> ~/.zshenv
 echo export TURTLEBOT_SERIAL_PORT=/dev/ttyUSB0 >> ~/.zshenv
 # Use the JetsonBot development paths before using the default
-echo source ~/jetsonbot/devel/setup.zsh >> ~/.zshenv
+echo source ~/workspace/ROS/jetsonbot/devel/setup.zsh >> ~/.zshenv
 
 # Not sure if this is still needed
 #echo \# Allow RVIZ to work by unsetting the GTK_IM_MODULE environment variable >> ~/.bashrc
